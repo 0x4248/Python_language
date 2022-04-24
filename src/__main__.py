@@ -17,4 +17,9 @@ if __name__ == "__main__":
         else:
             Raise.error(name="File Not Found", message="File does not exist: "+sys.argv[1])
     else:
-        print("Enter a file name to run")
+        choice = input("Would you like to enter the shell? (y/n)")
+        if choice == "y" or choice == "Y":
+            shell.in_shell = True
+            shell.run()
+        else:
+            exit(0)
